@@ -58,7 +58,7 @@ This project includes GitHub Actions workflows for automatic deployment to GitHu
 
 1. Push your changes to the `main` branch
 2. GitHub Actions will build and deploy your site
-3. Access your site at `https://cone-forest.github.io/cone-forest-website`
+3. Access your site at `https://cone-forest.github.io/`
 
 Before your first deployment:
 
@@ -68,7 +68,7 @@ Before your first deployment:
 ```typescript
 const nextConfig = {
   output: 'export',
-  basePath: '/cone-forest-website',
+  basePath: '/',
   images: { unoptimized: true },
 };
 ```
