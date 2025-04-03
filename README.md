@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Graphics Programming Portfolio
+
+A modern, responsive portfolio website built with Next.js and TailwindCSS, showcasing my graphics programming projects and rendering expertise.
+
+## Features
+
+- Responsive design that works on all devices
+- Project showcase with screenshots of graphics programming work
+- Multilingual support (English, Russian, German)
+- Contact information
+- GitHub Pages deployment
+
+## Projects Featured
+
+### Graphics Projects
+- **TER (2022)** - Graphics rendering project using C/OpenGL with deferred rendering pipeline
+- **TMP (2023)** - Advanced rendering project using C++/Vulkan with improved compute shader utilization
+- **mr-graphics (WIP)** - In-development modern rendering engine
+
+### Libraries & Tools
+- **mr-math** - High-performance linear algebra library optimized for 3D graphics with SIMD instructions
+- **mr-contractor** - Declarative C++ task execution library for complex workflows
+- **mr-importer** - Asset importing library for 3D models and resources
+
+## Technologies
+
+- [Next.js](https://nextjs.org/) - React framework
+- [TailwindCSS](https://tailwindcss.com/) - Utility-first CSS framework
+- [TypeScript](https://www.typescriptlang.org/) - Static type checking
+- [GitHub Pages](https://pages.github.com/) - Hosting
 
 ## Getting Started
 
-First, run the development server:
+### Development
 
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Building for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+# Build the site
+npm run build
+```
 
-## Learn More
+This generates a static export in the `out` directory that can be deployed to GitHub Pages.
 
-To learn more about Next.js, take a look at the following resources:
+## GitHub Pages Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This project includes GitHub Actions workflows for automatic deployment to GitHub Pages.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Push your changes to the `main` branch
+2. GitHub Actions will build and deploy your site
+3. Access your site at `https://cone-forest.github.io/cone-forest-website`
 
-## Deploy on Vercel
+Before your first deployment:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. In GitHub repository settings, enable GitHub Pages with GitHub Actions
+2. Update the `next.config.ts` file by uncommenting and updating the basePath:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```typescript
+const nextConfig = {
+  output: 'export',
+  basePath: '/cone-forest-website',
+  images: { unoptimized: true },
+};
+```
+
+## Contact
+
+- **Telegram:** [https://t.me/cgsg106](https://t.me/cgsg106)
+- **Email:** mt6@4j-company.ru
+- **GitHub:** [https://github.com/cone-forest](https://github.com/cone-forest)
+
+## License
+
+MIT
