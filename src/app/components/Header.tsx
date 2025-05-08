@@ -12,16 +12,49 @@ export default function HeaderWithTranslation() {
   const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
-    // Check if dark mode is enabled on component mount
+    // On mount, read dark mode preference from localStorage
     if (typeof window !== 'undefined') {
+      // Check localStorage first
+      const savedMode = localStorage.getItem('darkMode');
+      const isDarkMode = savedMode === 'true';
+      
+      // Apply dark mode class if needed
+      if (isDarkMode) {
+        document.documentElement.classList.add('dark');
+      } else if (savedMode === 'false') {
+        document.documentElement.classList.remove('dark');
+      } else {
+        // If no preference stored, use system preference
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.documentElement.classList.add('dark');
+          localStorage.setItem('darkMode', 'true');
+        } else {
+          document.documentElement.classList.remove('dark');
+          localStorage.setItem('darkMode', 'false');
+        }
+      }
+      
+      // Update state to match the actual class
       setDarkMode(document.documentElement.classList.contains('dark'));
     }
   }, []);
 
   const toggleDarkMode = () => {
     if (typeof window !== 'undefined') {
-      document.documentElement.classList.toggle('dark');
-      setDarkMode(!darkMode);
+      const newDarkMode = !darkMode;
+      
+      // Toggle class on html element
+      if (newDarkMode) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+      
+      // Save preference to localStorage
+      localStorage.setItem('darkMode', newDarkMode.toString());
+      
+      // Update state
+      setDarkMode(newDarkMode);
     }
   };
 

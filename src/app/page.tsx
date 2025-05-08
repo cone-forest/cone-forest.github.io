@@ -18,13 +18,13 @@ export default function Home() {
           <div className="flex justify-center gap-4">
             <a 
               href="#projects" 
-              className="bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-colors"
+              className="bg-black dark:bg-gray-700 text-white px-6 py-3 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors"
             >
               {t.hero.viewWork}
             </a>
             <a 
               href="#contact" 
-              className="border border-black px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors"
+              className="border border-black dark:border-gray-500 px-6 py-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
             >
               {t.hero.contactMe}
             </a>
@@ -207,15 +207,15 @@ export default function Home() {
             <div className="flex flex-col gap-4 items-center">
               <div className="flex items-center gap-2">
                 <span className="font-bold">{t.contact.telegram}</span>
-                <a href="https://t.me/cgsg106" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">@cgsg106</a>
+                <a href="https://t.me/cgsg106" target="_blank" rel="noopener noreferrer" className="text-blue-500 dark:text-blue-400 hover:underline">@cgsg106</a>
               </div>
               <div className="flex items-center gap-2">
                 <span className="font-bold">{t.contact.email}</span>
-                <a href="mailto:mt6@4j-company.ru" className="text-blue-500 hover:underline">mt6@4j-company.ru</a>
+                <a href="mailto:mt6@4j-company.ru" className="text-blue-500 dark:text-blue-400 hover:underline">mt6@4j-company.ru</a>
               </div>
               <div className="flex items-center gap-2">
                 <span className="font-bold">{t.contact.github}</span>
-                <a href="https://github.com/cone-forest" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">cone-forest</a>
+                <a href="https://github.com/cone-forest" target="_blank" rel="noopener noreferrer" className="text-blue-500 dark:text-blue-400 hover:underline">cone-forest</a>
               </div>
             </div>
           </div>

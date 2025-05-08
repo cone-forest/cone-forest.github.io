@@ -31,13 +31,19 @@ export default function RootLayout({
         <script dangerouslySetInnerHTML={{
           __html: `
             (function() {
-              // Check for dark mode preference
-              if (typeof window !== 'undefined') {
-                if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+              // Apply dark mode immediately on load to prevent flash
+              try {
+                const savedMode = localStorage.getItem('darkMode');
+                if (savedMode === 'true') {
                   document.documentElement.classList.add('dark');
-                } else {
+                } else if (savedMode === 'false') {
                   document.documentElement.classList.remove('dark');
+                } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                  document.documentElement.classList.add('dark');
+                  localStorage.setItem('darkMode', 'true');
                 }
+              } catch (e) {
+                // Ignore any errors (e.g., localStorage not available)
               }
             })();
           `
