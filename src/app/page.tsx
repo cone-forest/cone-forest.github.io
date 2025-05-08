@@ -35,17 +35,17 @@ export default function Home() {
       {/* About Section */}
       <section id="about" className="py-20 px-4 bg-gray-50 dark:bg-gray-900">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8 text-center">{t.about.title}</h2>
+          <h2 className="text-3xl font-bold mb-8 text-center text-white">{t.about.title}</h2>
           <div className="flex flex-col md:flex-row gap-8 items-center">
             <div className="w-full md:w-1/3 flex justify-center">
               {/* Placeholder for profile image */}
               <div className="w-64 h-64 bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center text-4xl font-bold text-gray-400 dark:text-gray-300">M</div>
             </div>
             <div className="w-full md:w-2/3">
-              <p className="mb-4 dark:text-gray-200">
+              <p className="mb-4 dark:text-white">
                 {t.about.description1}
               </p>
-              <p className="dark:text-gray-200">
+              <p className="dark:text-white">
                 {t.about.description2}
               </p>
             </div>
@@ -75,14 +75,14 @@ export default function Home() {
                 <h3 className="text-2xl font-bold mb-2">{t.projectDetails.ter.title}</h3>
                 <div className="mb-4">
                   <p className="font-semibold mb-2">{t.projects.renderOverview}</p>
-                  <ul className="list-disc pl-5 text-gray-600 dark:text-gray-300 space-y-1">
+                  <ul className="list-disc pl-5 dark:text-white space-y-1">
                     {t.projectDetails.ter.features.map((feature, index) => (
                       <li key={index}>{feature}</li>
                     ))}
                   </ul>
                 </div>
                 <div className="flex gap-4">
-                  <a href="https://github.com/4J-company/mr-graphics" className="text-blue-500 hover:underline">{t.projects.repository}</a>
+                  <a href="https://github.com/4J-company/mr-graphics" className="site-link hover:underline">{t.projects.repository}</a>
                 </div>
               </div>
             </div>
@@ -101,14 +101,14 @@ export default function Home() {
                 <h3 className="text-2xl font-bold mb-2">{t.projectDetails.tmp.title}</h3>
                 <div className="mb-4">
                   <p className="font-semibold mb-2">{t.projects.renderOverview}</p>
-                  <ul className="list-disc pl-5 text-gray-600 dark:text-gray-300 space-y-1">
+                  <ul className="list-disc pl-5 dark:text-white space-y-1">
                     {t.projectDetails.tmp.features.map((feature, index) => (
                       <li key={index}>{feature}</li>
                     ))}
                   </ul>
                 </div>
                 <div className="flex gap-4">
-                  <a href="https://github.com/4J-company/mr-graphics" className="text-blue-500 hover:underline">{t.projects.repository}</a>
+                  <a href="https://github.com/4J-company/mr-graphics" className="site-link hover:underline">{t.projects.repository}</a>
                 </div>
               </div>
             </div>
@@ -117,11 +117,11 @@ export default function Home() {
             <div className="border dark:border-gray-700 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow bg-white dark:bg-gray-800 lg:col-span-2">
               <div className="p-6">
                 <h3 className="text-2xl font-bold mb-2">{t.projectDetails.mrGraphics.title}</h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                <p className="dark:text-white mb-4">
                   {t.projectDetails.mrGraphics.description}
                 </p>
                 <div className="flex gap-4">
-                  <a href="https://github.com/4J-company/mr-graphics" className="text-blue-500 hover:underline">{t.projects.repository}</a>
+                  <a href="https://github.com/4J-company/mr-graphics" className="site-link hover:underline">{t.projects.repository}</a>
                 </div>
               </div>
             </div>
@@ -134,19 +134,19 @@ export default function Home() {
             <div className="border dark:border-gray-700 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow bg-white dark:bg-gray-800">
               <div className="p-6">
                 <h3 className="text-2xl font-bold mb-2">{t.projectDetails.mrMath.title}</h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                <p className="dark:text-white mb-4">
                   {t.projectDetails.mrMath.description}
                 </p>
                 <div className="mb-4">
                   <p className="font-semibold mb-2">{t.projects.keyFeatures}</p>
-                  <ul className="list-disc pl-5 text-gray-600 dark:text-gray-300 space-y-1">
+                  <ul className="list-disc pl-5 dark:text-white space-y-1">
                     {t.projectDetails.mrMath.features.map((feature, index) => (
                       <li key={index}>{feature}</li>
                     ))}
                   </ul>
                 </div>
                 <div className="flex gap-4">
-                  <a href="https://github.com/4J-company/mr-math" className="text-blue-500 hover:underline">{t.projects.repository}</a>
+                  <a href="https://github.com/4J-company/mr-math" className="site-link hover:underline">{t.projects.repository}</a>
                 </div>
               </div>
             </div>
@@ -155,19 +155,19 @@ export default function Home() {
             <div className="border dark:border-gray-700 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow bg-white dark:bg-gray-800">
               <div className="p-6">
                 <h3 className="text-2xl font-bold mb-2">{t.projectDetails.mrContractor.title}</h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                <p className="dark:text-white mb-4">
                   {t.projectDetails.mrContractor.description}
                 </p>
                 <div className="mb-4">
                   <p className="font-semibold mb-2">{t.projects.keyFeatures}</p>
-                  <ul className="list-disc pl-5 text-gray-600 dark:text-gray-300 space-y-1">
+                  <ul className="list-disc pl-5 dark:text-white space-y-1">
                     {t.projectDetails.mrContractor.features.map((feature, index) => (
                       <li key={index}>{feature}</li>
                     ))}
                   </ul>
                 </div>
                 <div className="flex gap-4">
-                  <a href="https://github.com/4J-company/mr-contractor" className="text-blue-500 hover:underline">{t.projects.repository}</a>
+                  <a href="https://github.com/4J-company/mr-contractor" className="site-link hover:underline">{t.projects.repository}</a>
                 </div>
               </div>
             </div>
@@ -176,19 +176,19 @@ export default function Home() {
             <div className="border dark:border-gray-700 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow bg-white dark:bg-gray-800 lg:col-span-2">
               <div className="p-6">
                 <h3 className="text-2xl font-bold mb-2">{t.projectDetails.mrImporter.title}</h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                <p className="dark:text-white mb-4">
                   {t.projectDetails.mrImporter.description}
                 </p>
                 <div className="mb-4">
                   <p className="font-semibold mb-2">{t.projects.keyFeatures}</p>
-                  <ul className="list-disc pl-5 text-gray-600 dark:text-gray-300 space-y-1">
+                  <ul className="list-disc pl-5 dark:text-white space-y-1">
                     {t.projectDetails.mrImporter.features.map((feature, index) => (
                       <li key={index}>{feature}</li>
                     ))}
                   </ul>
                 </div>
                 <div className="flex gap-4">
-                  <a href="https://github.com/4J-company/mr-importer" className="text-blue-500 hover:underline">{t.projects.repository}</a>
+                  <a href="https://github.com/4J-company/mr-importer" className="site-link hover:underline">{t.projects.repository}</a>
                 </div>
               </div>
             </div>
@@ -201,21 +201,21 @@ export default function Home() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold mb-8 text-center">{t.contact.title}</h2>
           <div className="max-w-xl mx-auto">
-            <p className="mb-6 text-center dark:text-gray-200">
+            <p className="mb-6 text-center dark:text-white">
               {t.contact.description}
             </p>
             <div className="flex flex-col gap-4 items-center">
               <div className="flex items-center gap-2">
                 <span className="font-bold">{t.contact.telegram}</span>
-                <a href="https://t.me/cgsg106" target="_blank" rel="noopener noreferrer" className="text-blue-500 dark:text-blue-400 hover:underline">@cgsg106</a>
+                <a href="https://t.me/cgsg106" target="_blank" rel="noopener noreferrer" className="site-link hover:underline">@cgsg106</a>
               </div>
               <div className="flex items-center gap-2">
                 <span className="font-bold">{t.contact.email}</span>
-                <a href="mailto:mt6@4j-company.ru" className="text-blue-500 dark:text-blue-400 hover:underline">mt6@4j-company.ru</a>
+                <a href="mailto:mt6@4j-company.ru" className="site-link hover:underline">mt6@4j-company.ru</a>
               </div>
               <div className="flex items-center gap-2">
                 <span className="font-bold">{t.contact.github}</span>
-                <a href="https://github.com/cone-forest" target="_blank" rel="noopener noreferrer" className="text-blue-500 dark:text-blue-400 hover:underline">cone-forest</a>
+                <a href="https://github.com/cone-forest" target="_blank" rel="noopener noreferrer" className="site-link hover:underline">cone-forest</a>
               </div>
             </div>
           </div>

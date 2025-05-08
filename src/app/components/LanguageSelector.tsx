@@ -32,7 +32,7 @@ export default function LanguageSelector() {
     <div className="relative" ref={menuRef}>
       <button
         onClick={toggleMenu}
-        className="flex items-center gap-2 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+        className="flex items-center gap-2 text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
       >
         <span>{t.language}</span>
         <svg 
@@ -51,7 +51,7 @@ export default function LanguageSelector() {
         <div className="absolute right-0 mt-2 w-40 bg-white dark:bg-gray-800 rounded-md shadow-lg z-50 overflow-hidden dark:border dark:border-gray-700">
           <div className="py-1">
             <button
-              className={`w-full text-left px-4 py-2 text-sm ${language === 'en' ? 'bg-gray-100 dark:bg-gray-700 font-medium' : 'hover:bg-gray-50 dark:hover:bg-gray-700'}`}
+              className={`w-full text-left px-4 py-2 text-sm text-black dark:text-white ${language === 'en' ? 'bg-gray-100 dark:bg-gray-700 font-medium' : 'hover:bg-gray-50 dark:hover:bg-gray-700'}`}
               onClick={() => {
                 setLanguage('en');
                 setIsOpen(false);
@@ -60,7 +60,7 @@ export default function LanguageSelector() {
               {t.english}
             </button>
             <button
-              className={`w-full text-left px-4 py-2 text-sm ${language === 'ru' ? 'bg-gray-100 dark:bg-gray-700 font-medium' : 'hover:bg-gray-50 dark:hover:bg-gray-700'}`}
+              className={`w-full text-left px-4 py-2 text-sm text-black dark:text-white ${language === 'ru' ? 'bg-gray-100 dark:bg-gray-700 font-medium' : 'hover:bg-gray-50 dark:hover:bg-gray-700'}`}
               onClick={() => {
                 setLanguage('ru');
                 setIsOpen(false);
@@ -69,7 +69,7 @@ export default function LanguageSelector() {
               {t.russian}
             </button>
             <button
-              className={`w-full text-left px-4 py-2 text-sm ${language === 'de' ? 'bg-gray-100 dark:bg-gray-700 font-medium' : 'hover:bg-gray-50 dark:hover:bg-gray-700'}`}
+              className={`w-full text-left px-4 py-2 text-sm text-black dark:text-white ${language === 'de' ? 'bg-gray-100 dark:bg-gray-700 font-medium' : 'hover:bg-gray-50 dark:hover:bg-gray-700'}`}
               onClick={() => {
                 setLanguage('de');
                 setIsOpen(false);
