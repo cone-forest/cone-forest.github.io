@@ -65,7 +65,7 @@ export default function Home() {
             <div className="border dark:border-gray-700 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow bg-white dark:bg-gray-800">
               <div className="h-64 relative">
                 <GitHubImage 
-                  src="/images/ter_screenshot_00_upscaled.png" 
+                  src="/images/ter_screenshot_00_upscaled.webp" 
                   alt="TER Project Screenshot" 
                   fill
                   style={{ objectFit: 'cover' }}
@@ -91,7 +91,7 @@ export default function Home() {
             <div className="border dark:border-gray-700 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow bg-white dark:bg-gray-800">
               <div className="h-64 relative">
                 <GitHubImage 
-                  src="/images/tmp_screenshot_01_upscaled.png" 
+                  src="/images/tmp_screenshot_01_upscaled.webp" 
                   alt="TMP Project Screenshot" 
                   fill
                   style={{ objectFit: 'cover' }}
