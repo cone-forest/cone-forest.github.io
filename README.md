@@ -1,83 +1,88 @@
-# Graphics Programming Portfolio
+# Cone Forest Website
 
-A modern, responsive portfolio website built with Next.js and TailwindCSS, showcasing my graphics programming projects and rendering expertise.
+This is a personal portfolio website built with Next.js featuring my graphics programming projects and rendering expertise.
 
 ## Features
 
-- Responsive design that works on all devices
-- Project showcase with screenshots of graphics programming work
+- Modern, responsive design built with Tailwind CSS
+- Showcase of graphics programming projects
 - Multilingual support (English, Russian, German)
-- Contact information
-- GitHub Pages deployment
+- Optimized for GitHub Pages deployment
 
-## Projects Featured
+## Development
 
-### Graphics Projects
-- **TER (2022)** - Graphics rendering project using C/OpenGL with deferred rendering pipeline
-- **TMP (2023)** - Advanced rendering project using C++/Vulkan with improved compute shader utilization
-- **mr-graphics (WIP)** - In-development modern rendering engine
+### Prerequisites
 
-### Libraries & Tools
-- **mr-math** - High-performance linear algebra library optimized for 3D graphics with SIMD instructions
-- **mr-contractor** - Declarative C++ task execution library for complex workflows
-- **mr-importer** - Asset importing library for 3D models and resources
+- Node.js (v18.x or later recommended)
+- npm or yarn package manager
 
-## Technologies
+### Setup
 
-- [Next.js](https://nextjs.org/) - React framework
-- [TailwindCSS](https://tailwindcss.com/) - Utility-first CSS framework
-- [TypeScript](https://www.typescriptlang.org/) - Static type checking
-- [GitHub Pages](https://pages.github.com/) - Hosting
-
-## Getting Started
-
-### Development
+1. Clone the repository:
 
 ```bash
-# Install dependencies
+git clone https://github.com/yourusername/cone-forest-website.git
+cd cone-forest-website
+```
+
+2. Install dependencies:
+
+```bash
 npm install
-
-# Run development server
-npm run dev
+# or
+yarn install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view the site in your browser.
-
-### Building for Production
+3. Start development server:
 
 ```bash
-# Build the site
-npm run build
+npm run dev
+# or
+yarn dev
 ```
 
-This generates a static export in the `out` directory that can be deployed to GitHub Pages.
+The site will be available at http://localhost:3000
+
+## Building for Production
+
+To create a production build:
+
+```bash
+npm run build
+# or
+yarn build
+```
 
 ## GitHub Pages Deployment
 
-This project includes GitHub Actions workflows for automatic deployment to GitHub Pages.
+This project is configured for GitHub Pages deployment. The site will automatically be deployed to GitHub Pages when changes are pushed to the main branch.
 
-1. Push your changes to the `main` branch
-2. GitHub Actions will build and deploy your site
-3. Access your site at `https://cone-forest.github.io/`
+### Manual Deployment
 
-Before your first deployment:
+You can also deploy manually using:
 
-1. In GitHub repository settings, enable GitHub Pages with GitHub Actions
-2. Update the `next.config.ts` file by uncommenting and updating the basePath:
-
-```typescript
-const nextConfig = {
-  output: 'export',
-  basePath: '/',
-  images: { unoptimized: true },
-};
+```bash
+npm run deploy
+# or
+yarn deploy
 ```
 
-## Contact
+### How it Works
 
-- **Telegram:** [https://t.me/cgsg106](https://t.me/cgsg106)
-- **Email:** mt6@4j-company.ru
-- **GitHub:** [https://github.com/cone-forest](https://github.com/cone-forest)
+The deployment is configured to:
+
+1. Build the Next.js application with static export
+2. Add a `.nojekyll` file to prevent GitHub Pages from processing the site with Jekyll
+3. Push the built files to the `gh-pages` branch
+4. Configure GitHub Pages to serve the site from this branch
+
+## Configuration for GitHub Pages
+
+The site includes several important configurations for proper GitHub Pages rendering:
+
+- `next.config.ts` includes `basePath` and `assetPrefix` settings for the GitHub Pages URL path
+- `GitHubImage` component properly handles image paths for both local development and GitHub Pages
+- GitHub Actions workflow automatically deploys changes
 
 ## License
 

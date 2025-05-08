@@ -1,8 +1,8 @@
 'use client';
 
-import Image from "next/image";
 import { useLanguage } from "./LanguageContext";
 import { translations } from "./translations";
+import GitHubImage from "./components/GitHubImage";
 
 export default function Home() {
   const { language } = useLanguage();
@@ -33,19 +33,19 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 px-4 bg-gray-50">
+      <section id="about" className="py-20 px-4 bg-gray-50 dark:bg-gray-900">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold mb-8 text-center">{t.about.title}</h2>
           <div className="flex flex-col md:flex-row gap-8 items-center">
             <div className="w-full md:w-1/3 flex justify-center">
               {/* Placeholder for profile image */}
-              <div className="w-64 h-64 bg-gray-200 rounded-full flex items-center justify-center text-4xl font-bold text-gray-400">M</div>
+              <div className="w-64 h-64 bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center text-4xl font-bold text-gray-400 dark:text-gray-300">M</div>
             </div>
             <div className="w-full md:w-2/3">
-              <p className="mb-4">
+              <p className="mb-4 dark:text-gray-200">
                 {t.about.description1}
               </p>
-              <p>
+              <p className="dark:text-gray-200">
                 {t.about.description2}
               </p>
             </div>
@@ -62,9 +62,9 @@ export default function Home() {
           <h3 className="text-2xl font-bold mb-6">{t.projects.graphicsProjects}</h3>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
             {/* Project Card 1 - TER */}
-            <div className="border rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+            <div className="border dark:border-gray-700 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow bg-white dark:bg-gray-800">
               <div className="h-64 relative">
-                <Image 
+                <GitHubImage 
                   src="/images/ter_screenshot_00_upscaled.png" 
                   alt="TER Project Screenshot" 
                   fill
@@ -75,7 +75,7 @@ export default function Home() {
                 <h3 className="text-2xl font-bold mb-2">{t.projectDetails.ter.title}</h3>
                 <div className="mb-4">
                   <p className="font-semibold mb-2">{t.projects.renderOverview}</p>
-                  <ul className="list-disc pl-5 text-gray-600 space-y-1">
+                  <ul className="list-disc pl-5 text-gray-600 dark:text-gray-300 space-y-1">
                     {t.projectDetails.ter.features.map((feature, index) => (
                       <li key={index}>{feature}</li>
                     ))}
@@ -88,9 +88,9 @@ export default function Home() {
             </div>
             
             {/* Project Card 2 - TMP */}
-            <div className="border rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+            <div className="border dark:border-gray-700 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow bg-white dark:bg-gray-800">
               <div className="h-64 relative">
-                <Image 
+                <GitHubImage 
                   src="/images/tmp_screenshot_01_upscaled.png" 
                   alt="TMP Project Screenshot" 
                   fill
@@ -101,7 +101,7 @@ export default function Home() {
                 <h3 className="text-2xl font-bold mb-2">{t.projectDetails.tmp.title}</h3>
                 <div className="mb-4">
                   <p className="font-semibold mb-2">{t.projects.renderOverview}</p>
-                  <ul className="list-disc pl-5 text-gray-600 space-y-1">
+                  <ul className="list-disc pl-5 text-gray-600 dark:text-gray-300 space-y-1">
                     {t.projectDetails.tmp.features.map((feature, index) => (
                       <li key={index}>{feature}</li>
                     ))}
@@ -114,10 +114,10 @@ export default function Home() {
             </div>
             
             {/* Project Card 3 - mr-graphics */}
-            <div className="border rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow lg:col-span-2">
+            <div className="border dark:border-gray-700 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow bg-white dark:bg-gray-800 lg:col-span-2">
               <div className="p-6">
                 <h3 className="text-2xl font-bold mb-2">{t.projectDetails.mrGraphics.title}</h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-600 dark:text-gray-300 mb-4">
                   {t.projectDetails.mrGraphics.description}
                 </p>
                 <div className="flex gap-4">
@@ -131,15 +131,15 @@ export default function Home() {
           <h3 className="text-2xl font-bold mb-6">{t.projects.librariesTools}</h3>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* mr-math */}
-            <div className="border rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+            <div className="border dark:border-gray-700 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow bg-white dark:bg-gray-800">
               <div className="p-6">
                 <h3 className="text-2xl font-bold mb-2">{t.projectDetails.mrMath.title}</h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-600 dark:text-gray-300 mb-4">
                   {t.projectDetails.mrMath.description}
                 </p>
                 <div className="mb-4">
                   <p className="font-semibold mb-2">{t.projects.keyFeatures}</p>
-                  <ul className="list-disc pl-5 text-gray-600 space-y-1">
+                  <ul className="list-disc pl-5 text-gray-600 dark:text-gray-300 space-y-1">
                     {t.projectDetails.mrMath.features.map((feature, index) => (
                       <li key={index}>{feature}</li>
                     ))}
@@ -152,15 +152,15 @@ export default function Home() {
             </div>
             
             {/* mr-contractor */}
-            <div className="border rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+            <div className="border dark:border-gray-700 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow bg-white dark:bg-gray-800">
               <div className="p-6">
                 <h3 className="text-2xl font-bold mb-2">{t.projectDetails.mrContractor.title}</h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-600 dark:text-gray-300 mb-4">
                   {t.projectDetails.mrContractor.description}
                 </p>
                 <div className="mb-4">
                   <p className="font-semibold mb-2">{t.projects.keyFeatures}</p>
-                  <ul className="list-disc pl-5 text-gray-600 space-y-1">
+                  <ul className="list-disc pl-5 text-gray-600 dark:text-gray-300 space-y-1">
                     {t.projectDetails.mrContractor.features.map((feature, index) => (
                       <li key={index}>{feature}</li>
                     ))}
@@ -173,15 +173,15 @@ export default function Home() {
             </div>
             
             {/* mr-importer */}
-            <div className="border rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow lg:col-span-2">
+            <div className="border dark:border-gray-700 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow bg-white dark:bg-gray-800 lg:col-span-2">
               <div className="p-6">
                 <h3 className="text-2xl font-bold mb-2">{t.projectDetails.mrImporter.title}</h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-600 dark:text-gray-300 mb-4">
                   {t.projectDetails.mrImporter.description}
                 </p>
                 <div className="mb-4">
                   <p className="font-semibold mb-2">{t.projects.keyFeatures}</p>
-                  <ul className="list-disc pl-5 text-gray-600 space-y-1">
+                  <ul className="list-disc pl-5 text-gray-600 dark:text-gray-300 space-y-1">
                     {t.projectDetails.mrImporter.features.map((feature, index) => (
                       <li key={index}>{feature}</li>
                     ))}
@@ -201,7 +201,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold mb-8 text-center">{t.contact.title}</h2>
           <div className="max-w-xl mx-auto">
-            <p className="mb-6 text-center">
+            <p className="mb-6 text-center dark:text-gray-200">
               {t.contact.description}
             </p>
             <div className="flex flex-col gap-4 items-center">
@@ -223,7 +223,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-4 text-center text-gray-600 border-t">
+      <footer className="py-8 px-4 text-center text-gray-600 dark:text-gray-400 border-t dark:border-gray-800">
         <p>{t.footer.rights}</p>
       </footer>
     </div>
